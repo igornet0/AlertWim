@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlertWim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="bar" data-tauri-drag-region>
+    <div class="brand" data-tauri-drag-region>
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="name" data-tauri-drag-region>AlertWim</span>
+    </div>
+    <div class="link" id="link" title="Связь с BoardDo">
+      <span class="dot"></span><span id="linkText">Ожидаю BoardDo</span>
+    </div>
+    <div class="tools">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Поиск  ⌘K" autocomplete="off" spellcheck="false" />
+      </label>
+      <button class="icon" id="pin" title="Поверх всех окон">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 3 3v2H7v-2l3-3z"/><path d="M12 15v5"/></svg>
+      </button>
+      <button class="icon" id="clear" title="Очистить  ⌘L">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="filters" id="filters">
+    <button data-level="all" class="on">Все <b>0</b></button>
+    <button data-level="info">Info <b>0</b></button>
+    <button data-level="success">Success <b>0</b></button>
+    <button data-level="warn">Warn <b>0</b></button>
+    <button data-level="error">Error <b>0</b></button>
+    <button data-level="debug">Debug <b>0</b></button>
+  </nav>
+
+  <main id="log" class="log" aria-live="polite"></main>
+
+  <div class="empty" id="empty" hidden>
+    <div class="empty-mark"><i></i><i></i><i></i></div>
+    <h2>Пока тихо</h2>
+    <p>Добавьте в сценарий BoardDo узел <code>AlertWim · сообщение</code> — логи появятся здесь.</p>
+  </div>
+
+  <button class="jump" id="jump" hidden>↓ Новые</button>
+
+  <footer class="foot">
+    <span id="url">—</span>
+    <span id="total">0 записей</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
