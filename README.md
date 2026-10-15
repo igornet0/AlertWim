@@ -1,6 +1,6 @@
 # AlertWim
 
-A tiny, good-looking local log window for [BoardDo](https://github.com/igornet0) scenarios.
+A tiny, good-looking local log window for [BoardDo](https://github.com/igornet0/BoardDo) scenarios.
 Scenarios send alerts to it; it shows them as a live, filterable feed.
 
 - One window: time · level · title · source · message, expandable JSON data.
